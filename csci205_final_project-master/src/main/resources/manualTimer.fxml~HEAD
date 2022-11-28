@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulerMVC.ManualController">
+    <children>
+        <DatePicker fx:id="startDate" layoutX="38.0" layoutY="62.0" />
+        <Slider fx:id="startHour" blockIncrement="1.0" layoutX="38.0" layoutY="100.0" max="12.0" min="1.0" showTickLabels="true" showTickMarks="true" />
+        <Slider fx:id="startMin" blockIncrement="1.0" layoutX="38.0" layoutY="142.0" max="59.0" showTickLabels="true" showTickMarks="true" />
+        <CheckBox fx:id="startPM" layoutX="52.0" layoutY="192.0" mnemonicParsing="false" onAction="#change" text="PM?" />
+        <CheckBox fx:id="endPM" layoutX="321.0" layoutY="192.0" mnemonicParsing="false" onAction="#change" text="PM?" />
+        <Slider fx:id="endMinute" blockIncrement="1.0" layoutX="308.0" layoutY="142.0" max="59.0" showTickLabels="true" showTickMarks="true" />
+        <Slider fx:id="endHour" blockIncrement="1.0" layoutX="308.0" layoutY="100.0" max="12.0" min="1.0" showTickLabels="true" showTickMarks="true" />
+        <DatePicker fx:id="endDate" layoutX="307.0" layoutY="62.0" />
+        <Text fx:id="startHourText" layoutX="73.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="01" wrappingWidth="12.9375" />
+        <Text fx:id="endHourText" layoutX="357.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="01" />
+        <Text fx:id="colon1" layoutX="86.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" />
+        <Text fx:id="colon2" layoutX="370.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" />
+        <Text fx:id="endMinText" layoutX="373.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" />
+        <Text fx:id="startMinText" layoutX="89.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" />
+        <Text fx:id="startTimeText" layoutX="17.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time" />
+        <Text fx:id="endTimeText" layoutX="305.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Time" />
+        <Label fx:id="AMLabel1" layoutX="103.0" layoutY="223.0" text="AM" />
+        <Label fx:id="AMLabel2" layoutX="387.0" layoutY="225.0" text="AM" />
+        <Button fx:id="addEvent" layoutX="187.0" layoutY="221.0" mnemonicParsing="false" onAction="#submit" text="Add Event" />
+        <Text fx:id="dateTimeStart" layoutX="41.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date/Time when started task:" />
+        <Text fx:id="dateTimeEnd" layoutX="310.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date/Time when ended task:" />
+        <Text fx:id="timeSpentText" layoutX="97.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Spent:" />
+        <Text fx:id="difference" layoutX="167.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+
+    </children>
+</AnchorPane>
